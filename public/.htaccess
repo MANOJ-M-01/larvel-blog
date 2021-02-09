@@ -4,8 +4,8 @@
     </IfModule>
 
     RewriteEngine On
-  RewriteCond %{HTTP_HOST} ^your-domain.com$ [NC,OR]
-  RewriteCond %{HTTP_HOST} ^www.your-domain.com$
-  RewriteCond %{REQUEST_URI} !your-laravel-folder/public/
-  RewriteRule (.*) /master/public/$1 [L]
+  RewriteCond %{HTTP_HOST} ^http://php-laravel-app.herokuapp.com/$ [NC,OR]
+  RewriteCond %{HTTP_HOST} ^http://php-laravel-app.herokuapp.com/$
+  RewriteCond %{REQUEST_URI} !public/
+  RewriteRule (.*) /public/$1 [L]
 </IfModule>
